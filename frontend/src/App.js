@@ -1,31 +1,27 @@
-import data from "./data";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
 
 function App() {
   return (
-    <div>
-      <header>
-        <a href="/">2 + 2 != 5</a>
-      </header>
-      <main>
-        <h1>Featured Products</h1>
-        <div className="products">
-          {data.products.map((products) => (
-            <div className="product" key={products.slug}>
-              <a href={`/product/${products.slug}`}>
-                <img src={products.image} alt={products.name} />
-              </a>
-              <div className="product-info">
-                <a href={`/product/${products.slug}`}>
-                  <p>{products.name}</p>
-                </a>
-                <p>{products.price}</p>
-                <button> Add to cart</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </main>
-    </div>
+    <Router>
+      <div>
+        <header>
+          <a href="/">2 + 2 != 5</a>
+        </header>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <HomeScreen />
+            </Route>
+            <Route exact path="/product/:slug">
+              <ProductScreen />
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </Router>
   );
 }
 
