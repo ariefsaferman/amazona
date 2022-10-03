@@ -1,9 +1,12 @@
 // @ts-nocheck
 
 import React, { useEffect, useReducer, useState } from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 import logger from "use-reducer-logger";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Product from "../components/Product";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -49,20 +52,13 @@ function HomeScreen() {
         ) : error ? (
           <div> {error} </div>
         ) : (
-          products.map((products) => (
-            <div className="product" key={products.slug}>
-              <Link to={`/product/${products.slug}`}>
-                <img src={products.image} alt={products.name} />
-              </Link>
-              <div className="product-info">
-                <Link to={`/product/${products.slug}`}>
-                  <p>{products.name}</p>
-                </Link>
-                <p>{products.price}</p>
-                <button> Add to cart</button>
-              </div>
-            </div>
-          ))
+          <Row>
+            {products.map((product) => (
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>

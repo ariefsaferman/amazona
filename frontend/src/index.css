@@ -35,3 +35,12 @@ main {
   padding: 1rem;
   align-items: center;
 }
+
+.rating span {
+  color: #ffc000;
+}
+
+.btn-primary {
+  background-color: #f0c040;
+  color: black;
+}
