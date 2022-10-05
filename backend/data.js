@@ -6,7 +6,7 @@ const data = {
       category: "animer",
       image: "/images/p2.png",
       price: 120 + "k",
-      countInStock: 10,
+      countInStock: 0,
       brand: "wibu",
       rating: 4.0,
       numReviews: 10,
