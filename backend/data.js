@@ -1,7 +1,6 @@
 const data = {
   products: [
     {
-      _id: "1",
       name: "Salman The Wibu Master",
       slug: "salman-wibu-master",
       category: "animer",
@@ -14,7 +13,6 @@ const data = {
       description: "high quality people",
     },
     {
-      _id: "2",
       name: "Farhan the arabian kebab",
       slug: "farhan-arabian-kebab",
       category: "arabic",
@@ -27,7 +25,6 @@ const data = {
       description: "high quality culture",
     },
     {
-      _id: "3",
       name: "Kevin The Wotagay Master",
       slug: "kevin-wotagay-master",
       category: "animer",
@@ -40,7 +37,6 @@ const data = {
       description: "high quality wota",
     },
     {
-      _id: "4",
       name: "aldo The animal cheater",
       slug: "aldo-animal-cheater",
       category: "animals",
