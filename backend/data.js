@@ -1,4 +1,21 @@
+// @ts-nocheck
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "Arief",
+      email: "arief.saferman@gmail.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: false,
+    },
+    {
+      name: "admin",
+      email: "admin@admin.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: true,
+    },
+  ],
   products: [
     {
       name: "Salman The Wibu Master",
